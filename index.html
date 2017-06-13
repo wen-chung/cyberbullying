@@ -7,7 +7,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="game.js"></script>
   </head>
-  <body>
+  <body onload="init()">
 
     <!-- ²Ä0­¶ -->
     <div id="chapter0" class="bgimg-1">
@@ -122,7 +122,14 @@
     
 	<!-- ²Ä4­¶ -->
     <div id="chapter4"  class="bgimg-3 container" style="text-align: center;">
-        <canvas id="scene" width="800px" height="600px"></canvas>
+        <div class="container">
+            <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
+					onmousemove="hammerMove(this);"  
+					onmousedown="hammerDown();" onmouseUp="hammerUp();" 
+					id="screen" width="800" height="600" style="border:1px solid #000"></canvas>
+        </div>
+		
+		<div id="info"></div>
     </div>
 
 	<!-- ²Ä5­¶ -->
