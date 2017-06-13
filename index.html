@@ -3,23 +3,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css"/>
-   <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js"></script>-->
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="game.js"></script>
   </head>
-  <body>
+  <body onload="init()">
 
     <!-- ²Ä0­¶ -->
     <div id="chapter0" class="bgimg-1"> 
       <!--<div class="caption">
         <span class="border">SCROLL DOWN</span>
       </div>-->
-      <iframe id="opening" src="animate/animate.html" style="width: 100vw;height: 100vh;" scrolling="no" frameborder="0"></iframe>
+      <iframe id="opening" src="animate/animate.html" width="80%" height="700px" scrolling="no" frameborder="0"></iframe>
     </div>
 
-	<!-- ¥k°¼¶êÂI -->
-    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">	
-	<ul>
+  <!-- ¥k°¼¶êÂI -->
+    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">  
+  <ul>
       <li><a href="#chapter0" class=""><span id="ch1"></span></a></li>
       <li><a href="#chapter1" class=""><span id="ch2"></span></a></li>
       <li><a href="#chapter2" class=""><span id="ch3"></span></a></li>
@@ -27,132 +27,125 @@
       <li><a href="#chapter4" class=""><span id="ch5"></span></a></li>
       <li><a href="#chapter5" class=""><span id="ch6"></span></a></li>
       <li><a href="#chapter6" class=""><span id="ch7"></span></a></li>
-	</ul>
+  </ul>
     </div>
-	
+  
     <!-- ²Ä1­¶ -->
-    <h1 style="text-align:center;color:#ddd;background-color:#282E34">鍵盤俠的定義</h1>
     
-   	<div id="chapter1" style="color: #777;text-align:center;position:relative; margin: 0;padding: 0;" width="100%" height="600px" >
-   		<!--<div style="width: 100%;font-size: 50px;margin: 0;padding: 0;">鍵盤俠的定義</div>-->
-      <div id=bubble1>
-   			<div id="display_bubble1">
-   				<h1>認識網路特性</h1>
-   				<p style="text-align:left">									網路匿名性：網路的基本特性之一，除了完全隱藏真實身份
-					，亦包含選擇性透露局部身份、扮演其他身份的異名行為。 
-				<br>
-					網路公開性：任何言論、資訊都可透過網路網路公開發表。
-				<br>
-					網際網路之擴散性：未經過證實之事件經由網路迅速傳播，
-					導致網路使用者過渡情緒化傷害事件當事人。
-				<p>
-   			</div>
-   		</div>
+    <div id="chapter1" style="color: #777;text-align:center;position:relative;" width="100%" height="700px">
+      <div id=bubble1 style="z-index: 50">
+        <div id="display_bubble1">
+          <h1>認識網路特性</h1>
+          <p style="text-align:left">                 網路匿名性：網路的基本特性之一，除了完全隱藏真實身份
+          ，亦包含選擇性透露局部身份、扮演其他身份的異名行為。 
+        <br>
+          網路公開性：任何言論、資訊都可透過網路網路公開發表。
+        <br>
+          網際網路之擴散性：未經過證實之事件經由網路迅速傳播，
+          導致網路使用者過渡情緒化傷害事件當事人。
+        <p>
+        </div>
+      </div>
 
-   		<div id=bubble2 >
-   			<div id="display_bubble2">
-   				<h2>何謂網路霸凌（Cyber-Bullying)</h2>
-   				<p style="text-align:left">									　　針對一人（含）以上的群體，散播涉及威脅性、攻擊性或
-						性暗示等造成當事人害怕、感到威脅或不友善的網路言語，並
-						透過網路科技的特性傳播，擴散至全班、全校、全國、全球，
-						導致受害者持續被此霸凌傷口影響。
-				<br>
-					此種於網路上蓄意加深且重複性的傷害行為即「網路霸凌」。
-				<p>
-   			</div>
-   		</div>
+      <div id=bubble2 >
+        <div id="display_bubble2">
+          <h2>何謂網路霸凌（Cyber-Bullying)</h2>
+          <p style="text-align:left">                 　　針對一人（含）以上的群體，散播涉及威脅性、攻擊性或
+            性暗示等造成當事人害怕、感到威脅或不友善的網路言語，並
+            透過網路科技的特性傳播，擴散至全班、全校、全國、全球，
+            導致受害者持續被此霸凌傷口影響。
+        <br>
+          此種於網路上蓄意加深且重複性的傷害行為即「網路霸凌」。
+        <p>
+        </div>
+      </div>
 
-   		<div id=bubble3 >
-   			<div id="display_bubble3">
-   				<h1>網路霸凌型態1</h1>
-   				<p style="text-align:left">									網路文字：有歧視意味的笑話與殘酷批評，亦包括令人難堪
-					的線上票選活動。
-				<br>
-					圖像騷擾：個人私密照被公開流傳；傳送含有性暗示或不實
-					剪接（photoshop後製）的圖片等。
-				<br>
-					個人訊息：即言語恐嚇的訊息等直接傳送給被害對象。
-				<p>
-   			</div>
-   		</div>
+      <div id=bubble3 >
+        <div id="display_bubble3">
+          <h1>網路霸凌型態1</h1>
+          <p style="text-align:left">                 網路文字：有歧視意味的笑話與殘酷批評，亦包括令人難堪
+          的線上票選活動。
+        <br>
+          圖像騷擾：個人私密照被公開流傳；傳送含有性暗示或不實
+          剪接（photoshop後製）的圖片等。
+        <br>
+          個人訊息：即言語恐嚇的訊息等直接傳送給被害對象。
+        <p>
+        </div>
+      </div>
 
-   		<div id=bubble4>
-   			<div id="display_bubble4">
-   				<h2>網路霸凌型態2</h2>
-   				<p style="text-align:left">									公然侮辱：多以洗版方式於一論壇上公開辱罵或威脅受害人
-					，使受害者難以招架和應付。 
-				<br>
-					惡意冒名或模仿：以冒名或模仿特定族群之外表或行為特徵
-					，利用網路匿名特性加以羞辱，或甚至陷害他人，使受害者
-					人際關係惡化、受到誤解等精神傷害。 
-				<br>
-					起底、爆料：把受害人之個人資料（如真實姓名，容貌等）
-					於網路上公開傳播。
-				<p>
-   			</div>
-	   	</div>
+      <div id=bubble4>
+        <div id="display_bubble4">
+          <h2>網路霸凌型態2</h2>
+          <p style="text-align:left">                 公然侮辱：多以洗版方式於一論壇上公開辱罵或威脅受害人
+          ，使受害者難以招架和應付。 
+        <br>
+          惡意冒名或模仿：以冒名或模仿特定族群之外表或行為特徵
+          ，利用網路匿名特性加以羞辱，或甚至陷害他人，使受害者
+          人際關係惡化、受到誤解等精神傷害。 
+        <br>
+          起底、爆料：把受害人之個人資料（如真實姓名，容貌等）
+          於網路上公開傳播。
+        <p>
+        </div>
+      </div>
 
-   		<div id=bubble5>
-   			<div id="display_bubble5">
-   				<h2>何謂「鍵盤俠」</h2>
-   				<p style="text-align:left">									「鍵盤俠」一詞來自於畢詩成2014年於人民日報的時評
-					《激勵見義勇爲不能靠「鍵盤俠」》。文中指出一個現象：
-					案件發生後，網絡上産生來自不同角度的詰問，所有的詰問
-					都有其道理，然而最終卻是「誰都能說幾句、誰都沒有扛起
-					責任」。鍵盤俠不同於傳統霸凌，採取語言攻擊的網絡暴民
-					，利用網路之特性，持著鍵盤對各種網絡事件進行道德評判
-					和宣揚自我意識下的網路正義。
+      <div id=bubble5>
+        <div id="display_bubble5">
+          <h2>何謂「鍵盤俠」</h2>
+          <p style="text-align:left">                 「鍵盤俠」一詞來自於畢詩成2014年於人民日報的時評
+          《激勵見義勇爲不能靠「鍵盤俠」》。文中指出一個現象：
+          案件發生後，網絡上産生來自不同角度的詰問，所有的詰問
+          都有其道理，然而最終卻是「誰都能說幾句、誰都沒有扛起
+          責任」。鍵盤俠不同於傳統霸凌，採取語言攻擊的網絡暴民
+          ，利用網路之特性，持著鍵盤對各種網絡事件進行道德評判
+          和宣揚自我意識下的網路正義。
 
-				<p>
-   			</div>
-	   	</div>
-      
-      <img src="picture/電腦螢幕-01.png" style="width:100% ;height:100%; z-index: 0;">
-	  
+        <p>
+        </div>
+      </div>
+
+      <img src="picture/電腦螢幕-01.png" style="width:100% ;height:100%;">
+    
     </div>
 
-	<!-- ²Ä2­¶ -->
-  <h1 style="text-align:center;color:#ddd;background-color:#282E34">網路霸凌的新聞實例</h1>
+  <!-- ²Ä2­¶ -->
     <div id="chapter2"  class="bgimg-2">
         <!--<iframe width="854" height="480" src="https://www.youtube.com/embed/_xT4UuaONjk" frameborder="0" allowfullscreen></iframe>-->
-        <iframe width="800" height="600" src="https://www.youtube.com/embed/a8H8NRQitFY?ecver=1" frameborder="0"></iframe>
+        <iframe width="800" height="600" src="https://www.youtube.com/embed/a8H8NRQitFY?ecver=1" frameborder="0" allowfullscreen="true"></iframe>
     </div>
 
-	<!-- ²Ä3­¶ -->
+  <!-- ²Ä3­¶ -->
     <div id="chapter3"  style="position:relative;">
-		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-			<!--<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>-->
-      <img src="">
-		</div>
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
     </div>
     
-	<!-- ²Ä4­¶ -->
-    <div id="chapter4"  class="bgimg-3">
-      <!-- <canvas id="scene" width="800" height="600"></canvas>-->
-      <div class="container">
-        <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
+  <!-- ²Ä4­¶ -->
+    <div id="chapter4"  class="bgimg-3 container" style="text-align: center;">
+       <!-- <canvas id="scene" width="800" height="600"></canvas>-->
+       <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
           onmousemove="hammerMove(this);"  
           onmousedown="hammerDown();" onmouseUp="hammerUp();" 
-          id="screen" width="800" height="600" style="border:1px solid #000">   
-        </canvas>
-      </div>
-      
-      <div id="info"></div>
+          id="screen" width="800" height="600" style="border:1px solid #000"></canvas>
+
+          <div id="info"></div>
     </div>
 
-	<!-- ²Ä5­¶ -->
+  <!-- ²Ä5­¶ -->
     <div id="chapter5" style="position:relative;">
-		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-		<!--	<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>-->
-		</div>
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
     </div>
-	
-	<!-- ²Ä6­¶ -->
+    </div>
+  
+  <!-- ²Ä6­¶ -->
     <div id="chapter6" class="bgimg-1">
-		<div class="caption">
-		  <span class="border">Thinks!</span>
-      <img src="picture/boy-01-01.png" width="30%" height="30%">
-		</div>
+    <div class="caption">
+      <span class="border">Thanks!</span>
+      <img src="picture/boy-01-01.png">
+    </div>
     </div>
 
   </body>

@@ -149,7 +149,7 @@ function scroll_list(){
 // -------------------------------------------------------------
 
 // objects :
-function Button(x, y, w, h, state, image) {
+/*function Button(x, y, w, h, state, image) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -417,14 +417,7 @@ $(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入�
     }
     addEnemy();
 
-
-
-
-
-
-
-});
-
+});*/
 
 
 
