@@ -1,8 +1,7 @@
 
 body, html {
- /* height: 100%;*/
+  /*height: 100%;*/
   margin: 0;
-  padding: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
 }
@@ -111,7 +110,7 @@ h3 {
   color: #111;
 }
 
-#chapter-nav-container {
+/*#chapter-nav-container {
     width: px;
     height: 100%;
     z-index: 10000;
@@ -119,24 +118,24 @@ h3 {
     top: 50%;
     margin: -150px 0 0 0;
     position: fixed;
-}
+}*/
 
 #chapter0{
-	background-color:#7098DA;
+  background-color:#7098DA;
   text-align: center;
 }
 
 #chapter1{
-	background-color:#6EB6FF;
+  background-color:#6EB6FF;
 }
 
 #chapter2 {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
+  height: 0;
   overflow: hidden;
   background-color: #90F2FF;
-  text-align:center;
 }
 
 #chapter2 iframe,
@@ -160,12 +159,13 @@ h3 {
 }
 
 #chapter6{
-	background-color: #FFD464;
-	width: 100%;
+  background-color: #FFD464;
+  width: 100%;
     height: 600px; 
 
 }
 
+/*
 #scene {
    position:relative;
     padding: 0;
@@ -173,7 +173,7 @@ h3 {
     display: block;
     width: 800px;
 }
-
+*/
 
   .block{
     display: inline-block;
@@ -204,7 +204,7 @@ h3 {
     display:block;
   }
  
-  #opening{
+   #opening{
     opacity: 1;
     position: relative;
 
@@ -215,12 +215,12 @@ h3 {
     font-size:10px;
     text-align:center;
     background:#ff0;
-    width:30px;
-    height:30px;
+    /*width:30px;
+    height:30px;*/
     border-radius:50%; 
     position:absolute;
-    top:220px;
-    left:945px;
+    top:14%;
+    left:83.5%;
 
   }
 
@@ -231,8 +231,8 @@ h3 {
   #bubble1 div{
     display:none;
     position:absolute;
-    top:180px;
-    left:-605px;
+    top:400%;
+    left:-1300%;
     padding:5px;
   }
 
@@ -246,12 +246,10 @@ h3 {
     font-size:10px;
     text-align:center;
     background: #87CEFA;
-    width:30px;
-    height:30px;
     border-radius:50%; 
     position:absolute;
-    top:280px;
-    left:945px;
+    top:31%;
+    left:83.5%;
 
   }
 
@@ -262,8 +260,8 @@ h3 {
   #bubble2 div{
     display:none;
     position:absolute;
-    top:120px;
-    left:-605px;
+    top:200%;
+    left:-1300%;
     padding:5px;
   }
 
@@ -277,12 +275,10 @@ h3 {
     font-size:10px;
     text-align:center;
     background:#9999FF;
-    width:30px;
-    height:30px;
     border-radius:50%; 
     position:absolute;
-    top:340px;
-    left:945px;
+     top:47%;
+    left:83.5%;
 
   }
 
@@ -293,8 +289,8 @@ h3 {
   #bubble3 div{
     display:none;
     position:absolute;
-    top:60px;
-    left:-605px;
+    top:0%;
+    left:-1300%;
     padding:5px;
   }
 
@@ -308,12 +304,10 @@ h3 {
     font-size:10px;
     text-align:center;
     background:#9999FF;
-    width:30px;
-    height:30px;
     border-radius:50%; 
     position:absolute;
-    top:400px;
-    left:945px;
+    top:64%;
+    left:83.5%;
 
   }
 
@@ -324,8 +318,8 @@ h3 {
   #bubble4 div{
     display:none;
     position:absolute;
-    top:0px;
-    left:-605px;
+    top:-200%;
+    left:-1300%;
     padding:5px;
   }
 
@@ -339,12 +333,10 @@ h3 {
     font-size:10px;
     text-align:center;
     background:#7FFFD4;
-    width:30px;
-    height:30px;
     border-radius:50%; 
     position:absolute;
-    top:460px;
-    left:945px;
+    top:83%;
+    left:83.5%;
 
   }
 
@@ -355,8 +347,8 @@ h3 {
   #bubble5 div{
     display:none;
     position:absolute;
-    top:-60px;
-    left:-605px;
+    top:-430%;
+    left:-1300%;
     padding:5px;
   }
 
@@ -369,8 +361,8 @@ h3 {
   #display_bubble3,
   #display_bubble4,
   #display_bubble5{
-    width:450px;
-    height:250px;
+    /*width:30%;
+    height:30%;*/
     background:#fff;
     border-radius:5px;
     padding:5px;
@@ -378,6 +370,27 @@ h3 {
     position:absolute;
 
   }
+
+    #speech_bubble2{
+    opacity: 0;
+    width: 300px;
+    height: 200px;
+    left: 500px;
+    top: 100px;
+    z-index: 102;
+    position: absolute;
+    }
+
+    #speech_bubble3{
+    opacity: 0;
+    width: 300px;
+    height: 200px;
+    left: 500px;
+    top: 800px;
+    z-index: 102;
+    position: absolute;
+    
+    }
 
 
 /* Turn off parallax scrolling for tablets and phones */

@@ -9,17 +9,15 @@ var iDialogPage = 1;
 
 var ManShiftX = 0;
 var Itturn = true;
-var falldown = 0;
+var falldown = 50;
 var jump = 20;
 
 var enemy = null; // game objects
 var enemies = [];
 var iEnemyW = 219; // enemy width
 var iEnemyH = 42; // enemy height
-var iEnemySpeed = 2; // initial enemy speed
+var iEnemySpeed = 5; // initial enemy speed
 // -------------------------------------------------------------
-
-
 
 function scroll_list(){
 	$(window).scroll(function(){
@@ -49,8 +47,6 @@ function scroll_list(){
       $('#ch6').css('background-color', 'white');
       $('#ch7').css('opacity', '0.3');
       $('#ch7').css('background-color', 'white');
-      $('#speech_bubble2').css('opacity','0');
-
     }
     else if( h2>scrollVal && scrollVal > h1){
       $('#ch1').css('opacity', '0.3');
@@ -67,11 +63,6 @@ function scroll_list(){
       $('#ch6').css('background-color', 'white');
       $('#ch7').css('opacity', '0.3');
       $('#ch7').css('background-color', 'white');
-      var imgOffset = $('#ch1').offset();
-      imgOffset.top=imgOffset.top-200;
-      imgOffset.left=imgOffset.left-300; 
-      $('#speech_bubble2').offset(imgOffset);      
-      $('#speech_bubble2').css('opacity','1');
     }
     else if (h3>scrollVal && scrollVal > h2){
       $('#ch1').css('opacity', '0.3');
@@ -88,12 +79,6 @@ function scroll_list(){
       $('#ch6').css('background-color', 'white');
       $('#ch7').css('opacity', '0.3');
       $('#ch7').css('background-color', 'white');
-       var imgOffset = $('#ch2').offset();
-      imgOffset.top=imgOffset.top-200;
-      imgOffset.left=imgOffset.left-300;   
-      $('#speech_bubble3').offset(imgOffset);      
-      $('#speech_bubble3').css('opacity','1');
-      $('#speech_bubble2').css('opacity','0');
     }
     else if (h4>scrollVal && scrollVal > h3){
       $('#ch1').css('opacity', '0.3');
@@ -110,7 +95,6 @@ function scroll_list(){
       $('#ch6').css('background-color', 'white');
       $('#ch7').css('opacity', '0.3');
       $('#ch7').css('background-color', 'white');
-      $('#speech_bubble3').css('opacity','0');
     }
     else if ( h5>scrollVal && scrollVal > h4){
       $('#ch1').css('opacity', '0.3');
@@ -162,19 +146,6 @@ function scroll_list(){
     } 
   });
 }
-
-/*function ImgPosition{
-  $(function(){
-    var imgOffset = $('#ch1').offset();
-      $('#speech_bubble3').offset(imgOffset);
-
-
-
-
-  });
-
-
-}*/
 // -------------------------------------------------------------
 
 // objects :
@@ -195,6 +166,7 @@ function Enemy(x, y, w, h, speed, image) {
     this.speed = speed;
     this.image = image;
 }
+
 function People(x, y, w, h, image, live) {
     this.x = x;
     this.y = y;
@@ -245,9 +217,9 @@ function drawDialog() { // draw dialog function
         ctx.fillStyle = '#fff';
         if (iDialogPage == 1) {
             ctx.fillText('Game', ctx.canvas.width/2, 150);
-            ctx.font = '24px ';
-            ctx.fillText(' pressed "1" to jump', ctx.canvas.width/2, 250);
-            ctx.fillText(' ', ctx.canvas.width/2, 280);
+            ctx.font = '24px DS-Digital';
+            ctx.fillText(' test2', ctx.canvas.width/2, 250);
+            ctx.fillText(' test1', ctx.canvas.width/2, 280);
         } else if (iDialogPage == 2) {
             ctx.fillText('second', ctx.canvas.width/2, 150);
             ctx.font = '24px DS-Digital';
@@ -259,75 +231,29 @@ function drawDialog() { // draw dialog function
 function drawScene() { // main drawScene function
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // clear canvas
 
-       
-    ctx.drawImage(backgroundImage, 0 , 2000 - iBgShiftY, 768, 1024, 0, 0, 800, 600);
- 
     
- 
-    if(keyMan.live == false){
-        // draw dialog
-        drawDialog();
-        // draw button
-        ctx.drawImage(button.image, 0, button.imageShift, button.w, button.h, button.x, button.y, button.w, button.h);
-        ctx.font = '22px DS-Digital';
-        ctx.fillStyle = '#ffffff';
-        ctx.fillText('start', 400, 485);
-    }
-    else{ 
-      if( Itturn == true ){
-        ManShiftX += 5;
-
-        if( ManShiftX > (900-143)){
-          Itturn = false;
-          ManShiftX = 700;
-        }
-      }
-      else{
-        ManShiftX -= 5;
-
-        if( ManShiftX < 10){
-          Itturn = true;
-          ManShiftX = 0;
-        }
-      }
-
-      ctx.drawImage(keyMan.image, ManShiftX, keyMan.y + falldown);
+    ctx.drawImage(backgroundImage, 0 , 1000, 768, 1024, 0, 0, 800, 600);
 
      
+
       if (enemies.length > 0) {
         for (var ekey in enemies) {
             if (enemies[ekey] != undefined) {
                 ctx.drawImage(enemies[ekey].image, enemies[ekey].x, enemies[ekey].y);
+                enemies[ekey].y -= enemies[ekey].speed;
 
-                if (enemies[ekey].y < 0) {
-                    delete enemies[ekey];
-
+                if (enemies[ekey].y > canvas.height) {
+                    delete enemies[ekey];r
                 }
             }
         }
       }
 
 
-    }
-}
-
-
-function down(){
-  for (var ekey in enemies) {
-    if ((enemies[ekey].height-keyMan.y)<5) {
-          falldown = 0;
-        }
-        else
-        {
-          falldown = 30;
-        }
-    }
-}
-
-function collesion(){
-
 
 }
+
+
 // -------------------------------------------------------------
 
 
@@ -370,7 +296,7 @@ $(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入�
     oPImage.src = 'picture/r_run.png';
     oPImage.onload = function() { }
 
-    keyMan = new People(0, canvas.height-72, 58, 72, oPImage, false);
+    keyMan = new People(0, canvas.height-72, 58, 72, oPImage, true);
 
    
     
@@ -395,7 +321,7 @@ $(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入�
             iDialogPage = 2;          // 呈現第幾頁
             bDrawDialog = false;
             button.imageShift = 262;
-            keyMan.live  = true;
+            live = true;
         }
 
 
@@ -417,7 +343,7 @@ $(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入�
                           ctx.drawImage(enemies[ekey].image, enemies[ekey].x, enemies[ekey].y);
                             enemies[ekey].y -= enemies[ekey].speed;
 
-                        if (enemies[ekey].y < - iEnemyH) {
+                        if (enemies[ekey].y < 180) {
                           delete enemies[ekey];
                         }
                       } 
@@ -436,70 +362,23 @@ $(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入�
    
    var enTimer = null;
     function addEnemy() {
-        clearInterval(enTimer);   //?秒新增
-        var randX = getRand(0, canvas.width - iEnemyW);
-        var randY = getRand(30, 2000-42);
-        enemies.push(new Enemy(randX, randY, iEnemyW, iEnemyH, - iEnemySpeed, oEnemyImage));
-      
-        var interval = getRand(5000, 10000);
+        clearInterval(enTimer);
+
+        var randX = getRand(0, canvas.width - oEnemyImage.width);
+        enemies.push(new Enemy(randX, 30, iEnemyW, iEnemyH, - iEnemySpeed, oEnemyImage));
+
+        var interval = getRand(1000, 3000);
         enTimer = setInterval(addEnemy, interval); // loop drawScene
     }
     addEnemy();
-    setImgSize();
-    
+
+
+
+
+
+
 
 });
-
-function setImgSize(){
-  /*$(window).resize(function() {
-
-    var imgOffset = $('#chapter1').offset();
-    var imgWidth= $('#chapter1').width();
-    imgWidth=0.1*imgWidth;
-    $('#bubble1').width(imgWidth);
-    $('#bubble1').height(imgWidth);
-  
-});*/
-
-    var imgWidth= $('#chapter1').width();
-    imgWidth=0.03*imgWidth;
-    $('#bubble1').width(imgWidth);
-    $('#bubble1').height(imgWidth);
-    $('#bubble2').width(imgWidth);
-    $('#bubble2').height(imgWidth);
-    $('#bubble3').width(imgWidth);
-    $('#bubble3').height(imgWidth);
-    $('#bubble4').width(imgWidth);
-    $('#bubble4').height(imgWidth);
-    $('#bubble5').width(imgWidth);
-    $('#bubble5').height(imgWidth);
-
-    var displayBubble=$('#chapter1').offset();
-    var displayBubbleWidth= $('#chapter1').width();
-    var displayBubbleHeight= $('#chapter1').height();
-    displayBubbleWidth=0.48*displayBubbleWidth;
-    displayBubbleHeight=0.43*displayBubbleHeight;
-    $('#display_bubble1').width(displayBubbleWidth);
-    $('#display_bubble1').height(displayBubbleHeight);
-    $('#display_bubble2').width(displayBubbleWidth);
-    $('#display_bubble2').height(displayBubbleHeight);
-    $('#display_bubble3').width(displayBubbleWidth);
-    $('#display_bubble3').height(displayBubbleHeight);
-    $('#display_bubble4').width(displayBubbleWidth);
-    $('#display_bubble4').height(displayBubbleHeight);
-    $('#display_bubble5').width(displayBubbleWidth);
-    $('#display_bubble5').height(displayBubbleHeight);
-
-   /* displayBubble.top=1.8*displayBubble.top;
-    displayBubble.left=1.1*displayBubble.left;
-    $('#display_bubble1').left(displayBubble.left);
-    displayBubble.top=1.1*displayBubble.top;*/
-
-
-
-
-
-}
 
 
 

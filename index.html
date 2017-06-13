@@ -3,23 +3,20 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css"/>
-   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="game.js"></script>
   </head>
-  <body onload="init()">
+  <body>
 
     <!-- ²Ä0­¶ -->
-    <div id="chapter0" class="bgimg-1"> 
-      <!--<div class="caption">
-        <span class="border">SCROLL DOWN</span>
-      </div>-->
-      <iframe id="opening" src="animate/animate.html" width="80%" height="700px" scrolling="no" frameborder="0"></iframe>
+    <div id="chapter0" class="bgimg-1">
+      <iframe id="opening" src="animate/animate.html" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
     </div>
 
-  <!-- ¥k°¼¶êÂI -->
-    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">  
-  <ul>
+	<!-- ¥k°¼¶êÂI -->
+    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">	
+	<ul>
       <li><a href="#chapter0" class=""><span id="ch1"></span></a></li>
       <li><a href="#chapter1" class=""><span id="ch2"></span></a></li>
       <li><a href="#chapter2" class=""><span id="ch3"></span></a></li>
@@ -27,13 +24,16 @@
       <li><a href="#chapter4" class=""><span id="ch5"></span></a></li>
       <li><a href="#chapter5" class=""><span id="ch6"></span></a></li>
       <li><a href="#chapter6" class=""><span id="ch7"></span></a></li>
-  </ul>
+	</ul>
     </div>
-  
+
+    <div>
+      <img id="speech_bubble2" src="picture/對話框右2.png">
+      <img id="speech_bubble3" src="picture/對話框右3.png">
+    </div>
     <!-- ²Ä1­¶ -->
-    
-    <div id="chapter1" style="color: #777;text-align:center;position:relative;" width="100%" height="700px">
-      <div id=bubble1 style="z-index: 50">
+    <div id="chapter1" style="color: #777;text-align:center;position:relative;z-index: 0;width:100%; height:700px"  width="100%" height="700px">
+      <div id=bubble1>
         <div id="display_bubble1">
           <h1>認識網路特性</h1>
           <p style="text-align:left">                 網路匿名性：網路的基本特性之一，除了完全隱藏真實身份
@@ -104,48 +104,41 @@
         <p>
         </div>
       </div>
-
-      <img src="picture/電腦螢幕-01.png" style="width:100% ;height:100%;">
-    
+      <img src="picture/電腦螢幕大圖-01.png" width="100%" height="700px" style="z-index: 0;">
+      -->
     </div>
 
-  <!-- ²Ä2­¶ -->
+	<!-- ²Ä2­¶ -->
     <div id="chapter2"  class="bgimg-2">
-        <!--<iframe width="854" height="480" src="https://www.youtube.com/embed/_xT4UuaONjk" frameborder="0" allowfullscreen></iframe>-->
-        <iframe width="800" height="600" src="https://www.youtube.com/embed/a8H8NRQitFY?ecver=1" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe width="700" height="600" src="https://www.youtube.com/embed/a8H8NRQitFY?ecver=1" frameborder="0" allowfullscreen></iframe>
     </div>
 
-  <!-- ²Ä3­¶ -->
+	<!-- ²Ä3­¶ -->
     <div id="chapter3"  style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-    </div>
+		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+			
+		</div>
     </div>
     
-  <!-- ²Ä4­¶ -->
+	<!-- ²Ä4­¶ -->
     <div id="chapter4"  class="bgimg-3 container" style="text-align: center;">
-       <!-- <canvas id="scene" width="800" height="600"></canvas>-->
-       <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
-          onmousemove="hammerMove(this);"  
-          onmousedown="hammerDown();" onmouseUp="hammerUp();" 
-          id="screen" width="800" height="600" style="border:1px solid #000"></canvas>
-
-          <div id="info"></div>
+        <canvas id="scene" width="800px" height="600px"></canvas>
     </div>
 
-  <!-- ²Ä5­¶ -->
+	<!-- ²Ä5­¶ -->
     <div id="chapter5" style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+		<!--<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">-->
+    <iframe src="https://plotdb.io/v/chart/13973" width="100%" height="600px"></iframe>
+			
+		</div>
     </div>
-    </div>
-  
-  <!-- ²Ä6­¶ -->
+	
+	<!-- ²Ä6­¶ -->
     <div id="chapter6" class="bgimg-1">
-    <div class="caption">
-      <span class="border">Thanks!</span>
+		<div class="caption">
+		  <span class="border">Thanks!</span>
       <img src="picture/boy-01-01.png">
-    </div>
+		</div>
     </div>
 
   </body>
