@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script type="text/javascript" src="game.js"></script>
   </head>
   <body>
 
@@ -127,7 +128,16 @@
     
 	<!-- ²Ä4­¶ -->
     <div id="chapter4"  class="bgimg-3">
-        <canvas id="scene" width="800" height="600"></canvas>
+      <!-- <canvas id="scene" width="800" height="600"></canvas>-->
+      <div class="container">
+        <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
+          onmousemove="hammerMove(this);"  
+          onmousedown="hammerDown();" onmouseUp="hammerUp();" 
+          id="screen" width="800" height="600" style="border:1px solid #000">   
+        </canvas>
+      </div>
+      
+      <div id="info"></div>
     </div>
 
 	<!-- ²Ä5­¶ -->
