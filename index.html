@@ -7,16 +7,16 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="game.js"></script>
   </head>
-  <body >
+  <body onload="init()">
 
     <!-- ²Ä0­¶ -->
     <div id="chapter0" class="bgimg-1">
       <iframe id="opening" src="animate/animate.html" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
     </div>
 
-  <!-- ¥k°¼¶êÂI -->
-    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">  
-  <ul>
+	<!-- ¥k°¼¶êÂI -->
+    <div id="fp-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -113.5px;">	
+	<ul>
       <li><a href="#chapter0" class=""><span id="ch1"></span></a></li>
       <li><a href="#chapter1" class=""><span id="ch2"></span></a></li>
       <li><a href="#chapter2" class=""><span id="ch3"></span></a></li>
@@ -24,7 +24,7 @@
       <li><a href="#chapter4" class=""><span id="ch5"></span></a></li>
       <li><a href="#chapter5" class=""><span id="ch6"></span></a></li>
       <li><a href="#chapter6" class=""><span id="ch7"></span></a></li>
-  </ul>
+	</ul>
     </div>
 
     <div>
@@ -108,37 +108,44 @@
       -->
     </div>
 
-  <!-- ²Ä2­¶ -->
+	<!-- ²Ä2­¶ -->
     <div id="chapter2"  class="bgimg-2">
         <iframe width="700" height="600" src="https://www.youtube.com/embed/a8H8NRQitFY?ecver=1" frameborder="0" allowfullscreen></iframe>
     </div>
 
-  <!-- ²Ä3­¶ -->
+	<!-- ²Ä3­¶ -->
     <div id="chapter3"  style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      
-    </div>
+		<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+			
+		</div>
     </div>
     
-  <!-- ²Ä4­¶ -->
+	<!-- ²Ä4­¶ -->
     <div id="chapter4"  class="bgimg-3 container" style="text-align: center;">
-        <canvas id="scene" width="800px" height="600px"></canvas>
+        <div class="container">
+            <canvas onmouseover="hideCursor(this)" onmouseout="showCursor"
+					onmousemove="hammerMove(this);"  
+					onmousedown="hammerDown();" onmouseUp="hammerUp();" 
+					id="screen" width="800" height="600" style="border:1px solid #000"></canvas>
+        </div>
+		
+		<div id="info"></div>
     </div>
 
-  <!-- ²Ä5­¶ -->
+	<!-- ²Ä5­¶ -->
     <div id="chapter5" style="position:relative;">
-    <!--<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">-->
+		<!--<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">-->
     <iframe src="https://plotdb.io/v/chart/13973" width="100%" height="600px"></iframe>
-      
+			
+		</div>
     </div>
-    </div>
-  
-  <!-- ²Ä6­¶ -->
+	
+	<!-- ²Ä6­¶ -->
     <div id="chapter6" class="bgimg-1">
-    <div class="caption">
-      <span class="border">Thanks!</span>
+		<div class="caption">
+		  <span class="border">Thanks!</span>
       <img src="picture/boy-01-01.png">
-    </div>
+		</div>
     </div>
 
   </body>
