@@ -155,6 +155,7 @@ function scroll_list(){
 $(document).ready(function(){   //其作用和 $(document).ready()一樣 ，用意在DOM載入後執行ready()方法。
     
     scroll_list();
+    //ready
     
     
 });
