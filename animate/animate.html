@@ -43,10 +43,11 @@
 		animation-name: show_speech_bubble;
 		animation-duration: 1s;
 		animation-iteration-count:1;
-		animation-delay: 5.1s;
+		animation-delay: 1s;
 		animation-fill-mode:forwards;
 		width:300px;
 		height:300px;
+		opacity: 0;
 
 	}
 
@@ -73,8 +74,8 @@
 	}
 
 	@keyframes show_speech_bubble{
-		from{top: 15px;left: 200px;opacity: 1;}
-		to{top: 15px;left: 200px;opacity: 0;}
+		from{top: 15px;left: 200px;opacity: 0;}
+		to{top: 15px;left: 200px;opacity: 1;}
 	}
 
 	
@@ -82,11 +83,11 @@
 <body>
 	<div>
 		<div style="text-align: center;position: relative; overflow: hidden;" width="100%" height="600px">
-			<img id="speech_bubble"  src="對話框左1.png" style="position: absolute;top: 15px;left: 200px; z-index: 20">
+			<img id="speech_bubble"  src="對話框左1.png" style="position: absolute;top: 15px;left: 60%; z-index: 20">
 			
-			<img id="moveOut" src="ok站1-01.png" style="position: absolute;top: 0px;left: 0; z-index: 20">
+			<img id="moveOut" src="ok站1-01.png" style="position: absolute;top: 0px;left: 50%; z-index: 20">
 
-			<img id="stand01" src="ok站-01.png" style="position: absolute;top: 0px;left: 0px;opacity:0.0;z-index: 20">
+			<img id="stand01" src="ok站-01.png" style="position: absolute;top: 0px;left: 50%;opacity:0.0;z-index: 20">
 			<!--<img src="84.jpg" width="900px" height="600px">-->
 			<img src="hightech首頁圖-01.png" width="100%" height="600px" style="z-index: 0;top:0;left: 0;">
 			
