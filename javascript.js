@@ -19,7 +19,7 @@ var iEnemyH = 42; // enemy height
 var iEnemySpeed = 2; // initial enemy speed
 // -------------------------------------------------------------
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
     
     scroll_list();
     //ready
